@@ -1,0 +1,97 @@
+/* ==========================================================================
+   CUSTOM MAGNETIC CURSOR
+   ========================================================================== */
+
+.custom-cursor-dot,
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease, transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, width, height;
+}
+
+.custom-cursor-dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-primary);
+}
+
+.custom-cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(17, 17, 17, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: transparent;
+  transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              height 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              transform 0.1s linear;
+}
+
+.custom-cursor-ring .cursor-arrow {
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Hover over clickable links & buttons */
+body.cursor-hover .custom-cursor-ring {
+  width: 54px;
+  height: 54px;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+body.cursor-hover .custom-cursor-ring .cursor-arrow {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.cursor-hover .custom-cursor-dot {
+  opacity: 0;
+}
+
+/* Hover over text/view projects */
+body.cursor-view .custom-cursor-ring {
+  width: 68px;
+  height: 68px;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+body.cursor-view .custom-cursor-ring .cursor-arrow {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+body.cursor-view .custom-cursor-dot {
+  opacity: 0;
+}
+
+/* Hide custom cursor when mouse leaves window or is off */
+body.cursor-hidden .custom-cursor-dot,
+body.cursor-hidden .custom-cursor-ring {
+  opacity: 0;
+}
+
+/* Disable custom cursor entirely on mobile / touch devices */
+@media (pointer: coarse), (hover: none), (max-width: 900px) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}

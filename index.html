@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Vivek Vaidya — Software Developer &amp; B.Tech AI &amp; Data Science Student</title>
+  <meta name="description" content="Personal portfolio of Vivek Vaidya — Student developer building practical software while developing a strong foundation in Artificial Intelligence and Data Science. Based in India.">
+  <meta name="author" content="Vivek Vaidya">
+  <meta name="keywords" content="Vivek Vaidya, Software Developer, B.Tech AI and Data Science, Android, Java, Python, SQLite, Firebase, Shree Enterprises">
+  
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vivek Vaidya — Software Developer &amp; AI / Data Science Student">
+  <meta property="og:description" content="Student developer building practical software while developing a strong foundation in Artificial Intelligence and Data Science.">
+  <meta property="og:image" content="assets/images/hero-portrait.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/cursor.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       CUSTOM CURSOR (Desktop Only)
+       ========================================================================= -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing">
+    <span class="cursor-arrow">↗</span>
+  </div>
+
+  <!-- =========================================================================
+       SITE HEADER
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-wide header-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo hero-anim-logo" aria-label="Vivek Vaidya Home">
+        VIVEK<span class="accent-dot">.</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="site-nav hero-anim-nav" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#project" class="nav-link">Project</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#focus" class="nav-link">Focus</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action & Mobile Toggle -->
+      <div class="header-actions">
+        <a href="#contact" class="btn-header-cta hero-anim-nav">Let's Talk</a>
+        
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Overlay Menu -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+    <nav class="mobile-nav-list">
+      <a href="#hero" class="mobile-nav-item mobile-nav-link"><span class="mobile-num">01</span>Home</a>
+      <a href="#about" class="mobile-nav-item mobile-nav-link"><span class="mobile-num">02</span>About</a>
+      <a href="#skills" class="mobile-nav-item mobile-nav-link"><span class="mobile-num">03</span>Skills</a>
+      <a href="#project" class="mobile-nav-item mobile-nav-link"><span class="mobile-num">04</span>Project</a>
+      <a href="#education" class="mobile-nav-item mobile-nav-link"><span class="mobile-num">05</span>Education</a>
+      <a href="#journey" class="mobile-nav-item mobile-nav-link"><span class="mobile-num">06</span>Journey</a>
+      <a href="#focus" class="mobile-nav-item mobile-nav-link"><span class="mobile-num">07</span>Current Focus</a>
+      <a href="#contact" class="mobile-nav-item mobile-nav-link"><span class="mobile-num">08</span>Contact</a>
+    </nav>
+
+    <div class="mobile-footer-info">
+      <div class="mobile-footer-email">vaidyavivek1276@gmail.com</div>
+      <div class="mobile-socials">
+        <a href="https://github.com/vaidyaviviek1276" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/vivek-vaidya-167547369/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         HERO SECTION (Editorial Composition directly from Reference Image)
+         ======================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <!-- Small intro tag -->
+          <div class="hero-intro-pill hero-anim-intro">
+            <span class="hero-intro-wave">👋</span> Hi, I'm Vivek and I am a
+          </div>
+
+          <!-- Monumental Editorial Typography -->
+          <div class="hero-title-wrap">
+            <h1 class="hero-title-solid hero-anim-title">Software Developer</h1>
+            <div class="hero-title-outline hero-anim-outline">&amp; AI &amp; Data Science Student</div>
+
+            <!-- Floating circular arrow badge like reference -->
+            <a href="#project" class="hero-floating-badge interactive-badge" aria-label="Explore Project">
+              <span>↗</span>
+            </a>
+          </div>
+
+          <!-- Hero Portrait Layered Cutout (Authentic user portrait with bottom fade) -->
+          <div class="hero-stage">
+            <div class="hero-portrait-wrapper hero-anim-portrait">
+              <img 
+                src="assets/images/hero-portrait.png" 
+                alt="Vivek Vaidya - Software Developer and AI Student" 
+                class="hero-portrait-img"
+                width="400"
+                height="400"
+                loading="eager"
+              >
+            </div>
+
+            <!-- Side & bottom metadata overlay -->
+            <div class="hero-sub-row hero-anim-meta">
+              <div class="hero-location">
+                <div>B.Tech Artificial Intelligence &amp; Data Science</div>
+                <div class="hero-location-sub">Based in India.</div>
+              </div>
+
+              <div class="hero-tech-strip">
+                <span class="hero-tech-item">Android</span>
+                <span class="hero-tech-item">Java</span>
+                <span class="hero-tech-item">Python</span>
+                <span class="hero-tech-item">SQLite</span>
+                <span class="hero-tech-item">Firebase</span>
+                <span class="hero-tech-item">XML</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual Call to Action Buttons -->
+          <div class="hero-cta-wrapper hero-anim-cta">
+            <a href="#project" class="btn-hero-primary">
+              View My Work <span class="btn-arrow">↓</span>
+            </a>
+            <a href="#contact" class="btn-hero-secondary">
+              Let's Talk <span class="btn-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         MARQUEE TICKER (Minimalist Editorial Ribbon)
+         ======================================================================= -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span class="marquee-item">ANDROID <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">JAVA <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">PYTHON <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">SQL <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">SQLITE <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">FIREBASE <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">XML <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">GIT <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">GITHUB <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">FLUTTER <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">SOFTWARE DEVELOPMENT <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">ARTIFICIAL INTELLIGENCE <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">DATA SCIENCE <span class="marquee-bullet"></span></span>
+        </div>
+        <div class="marquee-content">
+          <span class="marquee-item">ANDROID <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">JAVA <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">PYTHON <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">SQL <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">SQLITE <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">FIREBASE <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">XML <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">GIT <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">GITHUB <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">FLUTTER <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">SOFTWARE DEVELOPMENT <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">ARTIFICIAL INTELLIGENCE <span class="marquee-bullet"></span></span>
+          <span class="marquee-item">DATA SCIENCE <span class="marquee-bullet"></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================================
+         ABOUT SECTION (Identity, Vision & Factual Overview)
+         ======================================================================= -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-label">Identity &amp; Vision</span>
+          <h2 class="section-title">About</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Large Editorial Statement -->
+          <div class="about-quote-col scroll-reveal-left">
+            <h3 class="about-quote">
+              BUILDING SOFTWARE.<br>
+              LEARNING INTELLIGENCE.<br>
+              GROWING THROUGH CODE.
+            </h3>
+            <div class="about-pillars">
+              <div class="about-pillar-item">
+                <span class="pillar-title">Technical Foundation</span>
+                <span class="pillar-desc">Computer Engineering &amp; OOP</span>
+              </div>
+              <div class="about-pillar-item">
+                <span class="pillar-title">Mobile Engineering</span>
+                <span class="pillar-desc">Android Studio, Java &amp; SQLite</span>
+              </div>
+              <div class="about-pillar-item">
+                <span class="pillar-title">Future Expansion</span>
+                <span class="pillar-desc">AI &amp; Data Science Exploration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative Copy & Factual Identity Cards -->
+          <div class="about-narrative-col scroll-reveal-right">
+            <p class="about-lead-text">
+              "I'm a B.Tech Artificial Intelligence &amp; Data Science student with a Diploma in Computer Engineering. My journey began with computer engineering and software development, where I developed an interest in building practical applications."
+            </p>
+            <p class="about-details-text">
+              "Today, I'm expanding that foundation through Artificial Intelligence, Data Science, Python and modern software development. I enjoy learning by building and continuously improving my technical fundamentals."
+            </p>
+
+            <!-- Factual Identity Row (Replaced fake statistics) -->
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-header-tag">Current Degree</span>
+                <div class="stat-identity-title">B.Tech</div>
+                <div class="stat-identity-sub">AI &amp; Data Science</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-header-tag">Foundation</span>
+                <div class="stat-identity-title">Diploma</div>
+                <div class="stat-identity-sub">Computer Engineering</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-header-tag">Portfolio</span>
+                <div class="stat-identity-title">01</div>
+                <div class="stat-identity-sub">Selected Project</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-header-tag">Learning Focus</span>
+                <div class="stat-identity-title">AI + Data</div>
+                <div class="stat-identity-sub">Python &amp; ML Models</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WHAT I BUILD SUBSECTION (Categorized capabilities without fake numbers) -->
+        <div class="what-i-build-wrap scroll-reveal">
+          <div class="what-i-build-header">
+            <span class="section-label">Applied Capabilities</span>
+            <h3 class="section-title" style="font-size: clamp(2rem, 3.5vw, 3.2rem);">What I Build</h3>
+          </div>
+          <div class="what-i-build-grid">
+            <div class="build-card">
+              <div>
+                <span class="build-card-num">01</span>
+                <h4 class="build-card-title">Android Applications</h4>
+                <p class="build-card-desc">
+                  Native mobile solutions built with Java, custom XML layouts, and local database persistence designed for responsive user experiences.
+                </p>
+              </div>
+              <div>
+                <span class="build-card-badge">Production Focus</span>
+              </div>
+            </div>
+
+            <div class="build-card">
+              <div>
+                <span class="build-card-num">02</span>
+                <h4 class="build-card-title">Software Projects</h4>
+                <p class="build-card-desc">
+                  Object-oriented software systems prioritizing clean architecture, modularity, and algorithmic efficiency.
+                </p>
+              </div>
+              <div>
+                <span class="build-card-badge">Core Engineering</span>
+              </div>
+            </div>
+
+            <div class="build-card">
+              <div>
+                <span class="build-card-num">03</span>
+                <h4 class="build-card-title">Database-Driven Applications</h4>
+                <p class="build-card-desc">
+                  Applications integrating SQLite for fast offline caching and Firebase for real-time cloud data synchronization.
+                </p>
+              </div>
+              <div>
+                <span class="build-card-badge">Data Architecture</span>
+              </div>
+            </div>
+
+            <div class="build-card">
+              <div>
+                <span class="build-card-num">04</span>
+                <h4 class="build-card-title">AI &amp; Data Science Projects</h4>
+                <p class="build-card-desc">
+                  Exploratory machine learning models, statistical analysis pipelines, and data exploration scripts in Python.
+                </p>
+              </div>
+              <div>
+                <span class="build-card-badge highlight">Learning &amp; Exploration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SKILLS SECTION (Development Foundation vs Current Learning Focus)
+         ======================================================================= -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-label">Technical Competencies</span>
+          <h2 class="section-title">Skills</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="skills-filter-bar scroll-reveal">
+          <button class="skills-filter-btn active" data-filter="all">All Disciplines</button>
+          <button class="skills-filter-btn" data-filter="foundation">Development Foundation</button>
+          <button class="skills-filter-btn" data-filter="focus">Current Learning Focus</button>
+        </div>
+
+        <!-- Staggered Skill Rows -->
+        <div class="skills-list">
+          <!-- Foundation 01 -->
+          <div class="skill-row scroll-reveal stagger-1" data-category="foundation">
+            <span class="skill-index">01</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">Java</span>
+              <div class="skill-tags">
+                <span class="skill-tag">OOP</span>
+                <span class="skill-tag">Android SDK</span>
+                <span class="skill-tag">Data Structures</span>
+                <span class="skill-tag">Algorithms</span>
+              </div>
+            </div>
+            <span class="skill-category-badge">Development Foundation</span>
+          </div>
+
+          <!-- Foundation 02 -->
+          <div class="skill-row scroll-reveal stagger-2" data-category="foundation">
+            <span class="skill-index">02</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">Android</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Android Studio</span>
+                <span class="skill-tag">Activities &amp; Fragments</span>
+                <span class="skill-tag">Local Storage</span>
+                <span class="skill-tag">Services</span>
+              </div>
+            </div>
+            <span class="skill-category-badge">Development Foundation</span>
+          </div>
+
+          <!-- Foundation 03 -->
+          <div class="skill-row scroll-reveal stagger-3" data-category="foundation">
+            <span class="skill-index">03</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">XML</span>
+              <div class="skill-tags">
+                <span class="skill-tag">UI Design</span>
+                <span class="skill-tag">Layout Structuring</span>
+                <span class="skill-tag">Styles &amp; Themes</span>
+                <span class="skill-tag">Vector Drawables</span>
+              </div>
+            </div>
+            <span class="skill-category-badge">Development Foundation</span>
+          </div>
+
+          <!-- Foundation 04 -->
+          <div class="skill-row scroll-reveal stagger-4" data-category="foundation">
+            <span class="skill-index">04</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">SQLite</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Local Caching</span>
+                <span class="skill-tag">CRUD Operations</span>
+                <span class="skill-tag">Relational Schemas</span>
+                <span class="skill-tag">Offline First</span>
+              </div>
+            </div>
+            <span class="skill-category-badge">Development Foundation</span>
+          </div>
+
+          <!-- Foundation 05 -->
+          <div class="skill-row scroll-reveal stagger-1" data-category="foundation">
+            <span class="skill-index">05</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">Firebase</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Cloud Database</span>
+                <span class="skill-tag">Real-Time Sync</span>
+                <span class="skill-tag">Authentication</span>
+                <span class="skill-tag">Backend Integration</span>
+              </div>
+            </div>
+            <span class="skill-category-badge">Development Foundation</span>
+          </div>
+
+          <!-- Foundation 06 -->
+          <div class="skill-row scroll-reveal stagger-2" data-category="foundation">
+            <span class="skill-index">06</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">SQL</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Queries</span>
+                <span class="skill-tag">Relational DB</span>
+                <span class="skill-tag">Joins</span>
+                <span class="skill-tag">Schema Design</span>
+              </div>
+            </div>
+            <span class="skill-category-badge">Development Foundation</span>
+          </div>
+
+          <!-- Foundation 07 -->
+          <div class="skill-row scroll-reveal stagger-3" data-category="foundation">
+            <span class="skill-index">07</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">Git &amp; GitHub</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Version Control</span>
+                <span class="skill-tag">Repositories</span>
+                <span class="skill-tag">Branching</span>
+                <span class="skill-tag">Workflow</span>
+              </div>
+            </div>
+            <span class="skill-category-badge">Development Foundation</span>
+          </div>
+
+          <!-- Focus 08 -->
+          <div class="skill-row scroll-reveal stagger-1" data-category="focus">
+            <span class="skill-index">08</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">Python</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Scripting</span>
+              </div>
+            </div>
+            <span class="skill-category-badge" style="color: var(--color-accent);">Current Learning Focus</span>
+          </div>
+
+          <!-- Focus 09 -->
+          <div class="skill-row scroll-reveal stagger-2" data-category="focus">
+            <span class="skill-index">09</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">Artificial Intelligence</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Neural Architectures</span>
+                <span class="skill-tag">Search Algorithms</span>
+                <span class="skill-tag">AI Principles</span>
+                <span class="skill-tag">B.Tech Curriculum</span>
+              </div>
+            </div>
+            <span class="skill-category-badge" style="color: var(--color-accent);">Current Learning Focus</span>
+          </div>
+
+          <!-- Focus 10 -->
+          <div class="skill-row scroll-reveal stagger-3" data-category="focus">
+            <span class="skill-index">10</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">Data Science</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Exploratory Data Analysis</span>
+                <span class="skill-tag">Visualization</span>
+                <span class="skill-tag">Feature Engineering</span>
+                <span class="skill-tag">Statistics</span>
+              </div>
+            </div>
+            <span class="skill-category-badge" style="color: var(--color-accent);">Current Learning Focus</span>
+          </div>
+
+          <!-- Focus 11 -->
+          <div class="skill-row scroll-reveal stagger-4" data-category="focus">
+            <span class="skill-index">11</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">Machine Learning</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Supervised Learning</span>
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">Model Evaluation</span>
+                <span class="skill-tag">Classification</span>
+              </div>
+            </div>
+            <span class="skill-category-badge" style="color: var(--color-accent);">Current Learning Focus</span>
+          </div>
+
+          <!-- Focus 12 -->
+          <div class="skill-row scroll-reveal stagger-1" data-category="focus">
+            <span class="skill-index">12</span>
+            <div class="skill-name-wrap">
+              <span class="skill-name">Flutter</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Dart</span>
+                <span class="skill-tag">Cross-Platform</span>
+                <span class="skill-tag">Widget Tree</span>
+                <span class="skill-tag">Modern UI</span>
+              </div>
+            </div>
+            <span class="skill-category-badge" style="color: var(--color-accent);">Current Learning Focus</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SELECTED PROJECT SECTION (Visual Centerpiece: Shree Enterprises)
+         ======================================================================= -->
+    <section class="projects-section" id="project">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-label">Completed Project Showcase</span>
+          <h2 class="section-title">Selected Project</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Large Editorial Centerpiece Layout -->
+        <article class="project-centerpiece-wrap scroll-reveal" id="project-shree">
+          <!-- Visual Media Column -->
+          <div class="project-centerpiece-media" data-project-trigger="shree">
+            <img 
+              src="assets/images/project-shree.jpg" 
+              alt="Shree Enterprises - Android PC and Laptop Configuration Application" 
+              class="project-img" 
+              loading="lazy"
+              width="800" 
+              height="450"
+            >
+            <div class="project-overlay-cta">View Details ↗</div>
+          </div>
+
+          <!-- Project Information Column -->
+          <div class="project-info">
+            <div class="project-meta-top">
+              <span class="project-index">01 / 01</span>
+              <span class="project-category">Android Application</span>
+            </div>
+            <h3 class="project-title">SHREE ENTERPRISES</h3>
+            
+            <p class="project-desc">
+              An Android-based laptop and PC configuration application designed to help users explore computer components and build system configurations through a structured mobile interface. Built with native Java, SQLite, and Firebase integration.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="project-tech-pill">Java</span>
+              <span class="project-tech-pill">XML</span>
+              <span class="project-tech-pill">SQLite</span>
+              <span class="project-tech-pill">Firebase</span>
+              <span class="project-tech-pill">Android Studio</span>
+            </div>
+
+            <!-- Implemented Features Highlight -->
+            <div class="project-features-preview">
+              <div class="feat-pill"><span>▪</span> Component &amp; PC Browsing</div>
+              <div class="feat-pill"><span>▪</span> Hardware Specifications</div>
+              <div class="feat-pill"><span>▪</span> System Config Builder</div>
+              <div class="feat-pill"><span>▪</span> SQLite Local Database</div>
+              <div class="feat-pill"><span>▪</span> Firebase Cloud Sync</div>
+              <div class="feat-pill"><span>▪</span> Admin Inventory Control</div>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn-project-view" data-project-trigger="shree">
+                Explore Project Breakdown ↗
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         EDUCATION SECTION (Diploma → B.Tech AI & Data Science Progression)
+         ======================================================================= -->
+    <section class="education-section" id="education">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-label">Academic Foundations</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="edu-grid">
+          <!-- Degree 01: B.Tech (Current) -->
+          <div class="edu-card scroll-reveal-left">
+            <div>
+              <div class="edu-badge">Current Undergraduate Degree</div>
+              <h3 class="edu-degree">B.Tech — Artificial Intelligence &amp; Data Science</h3>
+              <div class="edu-status-tag">Currently Pursuing</div>
+              <div class="edu-field" style="margin-top: 1rem;">
+                Deepening theoretical and practical foundations in intelligent systems, machine learning algorithms, statistical data analysis, and modern computational models.
+              </div>
+            </div>
+            <div class="edu-coursework">
+              <div class="edu-coursework-title">Academic Curricular Scope:</div>
+              <div class="edu-pills">
+                <span class="edu-pill">Artificial Intelligence</span>
+                <span class="edu-pill">Machine Learning</span>
+                <span class="edu-pill">Data Structures &amp; Algorithms</span>
+                <span class="edu-pill">Probability &amp; Statistics</span>
+                <span class="edu-pill">Database Management Systems</span>
+                <span class="edu-pill">Python for Data Science</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Degree 02: Diploma (Completed Foundation) -->
+          <div class="edu-card scroll-reveal-right">
+            <div>
+              <div class="edu-badge">Technical Foundation</div>
+              <h3 class="edu-degree">Diploma — Computer Engineering</h3>
+              <div class="edu-institution">CSMSS College of Polytechnic, Chh. Sambhajinagar</div>
+              <div class="edu-field">
+                Rigorous foundational technical education covering programming paradigms, computer architecture, systems software, and hands-on software development principles.
+              </div>
+            </div>
+            <div class="edu-coursework">
+              <div class="edu-coursework-title">Foundational Engineering Coursework:</div>
+              <div class="edu-pills">
+                <span class="edu-pill">Object-Oriented Programming (Java/C++)</span>
+                <span class="edu-pill">Relational Databases (SQL)</span>
+                <span class="edu-pill">Operating Systems</span>
+                <span class="edu-pill">Computer Networks</span>
+                <span class="edu-pill">Software Engineering Fundamentals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Progression Indicator -->
+        <div class="edu-progression-connector scroll-reveal">
+          <span>Progression: Diploma in Computer Engineering &rarr; B.Tech in AI &amp; Data Science</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         JOURNEY SECTION (Factual Typographic Roadmap)
+         ======================================================================= -->
+    <section class="journey-section" id="journey">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-label">Evolution &amp; Milestones</span>
+          <h2 class="section-title">Journey</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="journey-timeline">
+          <!-- Step 01 -->
+          <div class="journey-item scroll-reveal stagger-1">
+            <div class="journey-role-col">
+              <span class="journey-num">01 / FOUNDATION</span>
+              <h3 class="journey-title">Diploma in Computer Engineering</h3>
+            </div>
+            <div class="journey-content-col">
+              <p class="journey-desc">
+                Built my core technical foundation in programming, computer engineering principles, and software development at CSMSS College of Polytechnic, Chh. Sambhajinagar.
+              </p>
+              <div class="journey-stack">Focus: C++, Java, Database Management, Computer Hardware &amp; Networking</div>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="journey-item scroll-reveal stagger-2">
+            <div class="journey-role-col">
+              <span class="journey-num">02 / SPECIALIZATION</span>
+              <h3 class="journey-title">Android Development</h3>
+            </div>
+            <div class="journey-content-col">
+              <p class="journey-desc">
+                Started building mobile software solutions using Java, native XML layout architectures, SQLite persistence, and Android Studio tooling.
+              </p>
+              <div class="journey-stack">Tooling: Android Studio, Java, XML Layouts, SQLite Caching</div>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="journey-item scroll-reveal stagger-3">
+            <div class="journey-role-col">
+              <span class="journey-num">03 / PROJECT</span>
+              <h3 class="journey-title">Shree Enterprises</h3>
+            </div>
+            <div class="journey-content-col">
+              <p class="journey-desc">
+                Engineered and delivered my completed Android mobile application project for PC and laptop component exploration, incorporating local SQLite and Firebase cloud synchronization.
+              </p>
+              <div class="journey-stack">Key Stack: Java, XML, SQLite, Firebase Realtime Database</div>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="journey-item scroll-reveal stagger-4">
+            <div class="journey-role-col">
+              <span class="journey-num">04 / DEGREE</span>
+              <h3 class="journey-title">B.Tech — AI &amp; Data Science</h3>
+            </div>
+            <div class="journey-content-col">
+              <p class="journey-desc">
+                Currently pursuing B.Tech in Artificial Intelligence &amp; Data Science, expanding software engineering capabilities into intelligent algorithms and statistical data pipelines.
+              </p>
+              <div class="journey-stack">Academic Focus: Artificial Intelligence, Data Science, Probability &amp; Statistics</div>
+            </div>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="journey-item scroll-reveal stagger-5">
+            <div class="journey-role-col">
+              <span class="journey-num">05 / ACTIVE</span>
+              <h3 class="journey-title">Current Focus</h3>
+            </div>
+            <div class="journey-content-col">
+              <p class="journey-desc">
+                Actively learning and building with Python, Artificial Intelligence fundamentals, Data Science, Machine Learning, and continuous software development improvement.
+              </p>
+              <div class="journey-stack">Continuous Learning: Python, Scikit-learn, Pandas, Flutter, Modern Software</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CURRENT FOCUS SECTION (Monumental Typography & Honest Learning Scope)
+         ======================================================================= -->
+    <section class="focus-section" id="focus">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-label">Active Learning Direction</span>
+          <h2 class="section-title">Current Focus</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Monumental Typographic Words List -->
+        <div class="focus-words-list scroll-reveal">
+          <div class="focus-word-item">
+            <span>Software Development</span>
+            <span class="focus-word-index">01 / CORE</span>
+          </div>
+          <div class="focus-word-item">
+            <span>Python</span>
+            <span class="focus-word-index">02 / LANGUAGE</span>
+          </div>
+          <div class="focus-word-item">
+            <span>Artificial Intelligence</span>
+            <span class="focus-word-index">03 / DEGREE DOMAIN</span>
+          </div>
+          <div class="focus-word-item">
+            <span>Data Science</span>
+            <span class="focus-word-index">04 / ANALYTICS</span>
+          </div>
+          <div class="focus-word-item">
+            <span>Machine Learning</span>
+            <span class="focus-word-index">05 / EXPLORATION</span>
+          </div>
+        </div>
+
+        <!-- Supporting Statement Card -->
+        <div class="focus-support-card scroll-reveal">
+          <p class="focus-support-text">
+            "Currently strengthening my software development fundamentals while building a strong foundation in Python, Artificial Intelligence and Data Science through my B.Tech journey."
+          </p>
+          <div class="focus-honesty-badge">
+            Student-Developer Learning Direction
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CONTACT SECTION (Editorial Impact & Real Contact Options)
+         ======================================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Left Column: Giant Typographic Callout -->
+          <div class="contact-hero-col scroll-reveal-left">
+            <span class="section-label">Let's Connect</span>
+            <h2 class="contact-hero-heading">
+              Let's build<br>something<span class="accent-dot">.</span>
+            </h2>
+            <p class="contact-subtitle">
+              Have an idea, project, collaboration or opportunity? Let's connect.
+            </p>
+
+            <!-- Direct Email Copy Pill -->
+            <div class="contact-email-box" id="copyEmailBox" title="Click to copy email address">
+              <span class="contact-email-text">vaidyavivek1276@gmail.com</span>
+              <span class="contact-copy-btn" id="contactCopyBtn">COPY EMAIL ↗</span>
+            </div>
+
+            <!-- Real Links -->
+            <div class="contact-social-row">
+              <a href="https://github.com/vaidyaviviek1276" target="_blank" rel="noopener noreferrer" class="social-link-item">
+                GitHub ↗
+              </a>
+              <a href="https://www.linkedin.com/in/vivek-vaidya-167547369/" target="_blank" rel="noopener noreferrer" class="social-link-item">
+                LinkedIn ↗
+              </a>
+              <a href="mailto:vaidyavivek1276@gmail.com" class="social-link-item">
+                Email Direct ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-col scroll-reveal-right">
+            <div class="contact-form-box">
+              <h3 class="contact-form-title">Send a Direct Message</h3>
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Your Name</label>
+                  <input type="text" id="contactName" class="form-input" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">Email Address</label>
+                  <input type="email" id="contactEmail" class="form-input" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactMessage" class="form-label">Project / Message</label>
+                  <textarea id="contactMessage" class="form-textarea" placeholder="Tell me about your project, idea, collaboration, or opportunity..." required></textarea>
+                </div>
+                <button type="submit" class="btn-form-submit">
+                  Send Message <span class="btn-arrow">↗</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (Minimalist & Clean)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-row">
+        <div>
+          <a href="#hero" class="footer-brand">
+            VIVEK<span class="accent-dot">.</span>
+          </a>
+          <div style="font-family: var(--font-mono); font-size: 0.85rem; color: #A0A0A0; margin-top: 0.4rem;">
+            Software Developer &bull; B.Tech AI &amp; Data Science
+          </div>
+        </div>
+        <div class="footer-nav">
+          <a href="https://github.com/vaidyaviviek1276" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/vivek-vaidya-167547369/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn ↗</a>
+          <a href="mailto:vaidyavivek1276@gmail.com" class="footer-nav-link">Email Direct ↗</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>&copy; 2026 Vivek Vaidya. All rights reserved.</div>
+        <div class="footer-time-badge">
+          <span class="footer-time-pulse"></span>
+          <span id="liveTimeIst">India (IST) &bull; Open to Opportunities</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       PROJECT DETAIL MODAL (Shree Enterprises Showcase)
+       ========================================================================= -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="project-modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Project Modal">&times;</button>
+      <div class="modal-content-wrap">
+        <div class="modal-header-meta">
+          <span id="modalMetaNum">01 / 01</span>
+          <span>&bull;</span>
+          <span id="modalCategory">Android Application</span>
+        </div>
+        <h3 class="modal-title" id="modalTitle">SHREE ENTERPRISES</h3>
+        
+        <div class="modal-image-wrap">
+          <img src="assets/images/project-shree.jpg" alt="Shree Enterprises - Android PC and Laptop Configuration App" id="modalImg" width="760" height="428">
+        </div>
+
+        <p class="modal-desc" id="modalDesc">
+          An Android-based laptop and PC configuration application designed to help users explore computer components and build system configurations through a structured mobile interface. Built with native Java, SQLite, and Firebase integration.
+        </p>
+
+        <div>
+          <div class="edu-coursework-title" style="margin-bottom: 0.5rem;">Implemented Project Features:</div>
+          <div class="modal-features-list" id="modalFeatures">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+        <div>
+          <div class="edu-coursework-title" style="margin-bottom: 0.5rem;">Development Areas:</div>
+          <div class="modal-tech-stack" id="modalDevAreas">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+        <div>
+          <div class="edu-coursework-title" style="margin-bottom: 0.5rem;">Technologies &amp; Architecture:</div>
+          <div class="modal-tech-stack" id="modalTech">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notice -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <span class="toast-dot"></span>
+    <span id="toastMsg">Email copied to clipboard!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/cursor.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
