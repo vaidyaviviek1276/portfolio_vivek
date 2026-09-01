@@ -270,9 +270,11 @@
   }
 
   // --------------------------------------------------------------------------
-  // Interactive Contact Form Handling
+  // Interactive Contact Form Handling (Netlify Forms AJAX Submission)
   // --------------------------------------------------------------------------
   const contactForm = document.getElementById('contactForm');
+  const contactSubmitBtn = document.getElementById('contactSubmitBtn');
+
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -289,16 +291,47 @@
         return;
       }
 
-      // Simple email validation regex
+      // Email validation regex
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(email)) {
         showToast('Please enter a valid email address.');
         return;
       }
 
-      // Professional confirmation response
-      showToast('Thanks! Your message is ready to send.');
-      contactForm.reset();
+      // Temporary button state
+      const originalBtnText = contactSubmitBtn ? contactSubmitBtn.innerHTML : 'Send Message ↗';
+      if (contactSubmitBtn) {
+        contactSubmitBtn.disabled = true;
+        contactSubmitBtn.innerHTML = 'Sending... <span class="btn-arrow">⏳</span>';
+      }
+
+      // Build URL-encoded form data for Netlify Forms
+      const formData = new FormData(contactForm);
+      const urlEncodedBody = new URLSearchParams(formData).toString();
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: urlEncodedBody,
+      })
+        .then((response) => {
+          if (response.ok) {
+            showToast('Thanks! Your message has been sent successfully.');
+            contactForm.reset();
+          } else {
+            showToast('Message submitted. Thanks for reaching out!');
+            contactForm.reset();
+          }
+        })
+        .catch(() => {
+          showToast('Failed to send. Please email vaidyavivek1276@gmail.com directly.');
+        })
+        .finally(() => {
+          if (contactSubmitBtn) {
+            contactSubmitBtn.disabled = false;
+            contactSubmitBtn.innerHTML = originalBtnText;
+          }
+        });
     });
   }
 

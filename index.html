@@ -902,20 +902,24 @@
           <div class="contact-form-col" data-reveal="right">
             <div class="contact-form-box">
               <h3 class="contact-form-title">Send a Direct Message</h3>
-              <form id="contactForm">
+              <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact" />
+                <p class="hidden">
+                  <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 <div class="form-group">
                   <label for="contactName" class="form-label">Your Name</label>
-                  <input type="text" id="contactName" class="form-input" placeholder="Your name" required>
+                  <input type="text" id="contactName" name="name" class="form-input" placeholder="Your name" required>
                 </div>
                 <div class="form-group">
                   <label for="contactEmail" class="form-label">Email Address</label>
-                  <input type="email" id="contactEmail" class="form-input" placeholder="your.email@example.com" required>
+                  <input type="email" id="contactEmail" name="email" class="form-input" placeholder="your.email@example.com" required>
                 </div>
                 <div class="form-group">
                   <label for="contactMessage" class="form-label">Project / Message</label>
-                  <textarea id="contactMessage" class="form-textarea" placeholder="Tell me about your project, idea, collaboration, or opportunity..." required></textarea>
+                  <textarea id="contactMessage" name="message" class="form-textarea" placeholder="Tell me about your project, idea, collaboration, or opportunity..." required></textarea>
                 </div>
-                <button type="submit" class="btn-form-submit">
+                <button type="submit" class="btn-form-submit" id="contactSubmitBtn">
                   Send Message <span class="btn-arrow">↗</span>
                 </button>
               </form>
