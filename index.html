@@ -19,6 +19,11 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   
+  <!-- Google Fonts: Orbitron & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
@@ -41,7 +46,7 @@
     <div class="container-wide header-container">
       <!-- Brand Logo -->
       <a href="#hero" class="brand-logo hero-anim-logo" aria-label="Vivek Vaidya Home">
-        VIVEK<span class="accent-dot">.</span>
+        Vivek Vaidya<span class="accent-dot">.</span>
       </a>
 
       <!-- Desktop Navigation -->
@@ -107,11 +112,6 @@
           <div class="hero-title-wrap">
             <h1 class="hero-title-solid hero-anim-title">Software Developer</h1>
             <div class="hero-title-outline hero-anim-outline">&amp; AI &amp; Data Science Student</div>
-
-            <!-- Floating circular arrow badge like reference -->
-            <a href="#project" class="hero-floating-badge interactive-badge" aria-label="Explore Project">
-              <span>↗</span>
-            </a>
           </div>
 
           <!-- Hero Portrait Layered Cutout (Authentic user portrait with bottom fade) -->
@@ -130,8 +130,12 @@
             <!-- Side & bottom metadata overlay -->
             <div class="hero-sub-row hero-anim-meta">
               <div class="hero-location">
-                <div>B.Tech Artificial Intelligence &amp; Data Science</div>
-                <div class="hero-location-sub">Based in India.</div>
+                <div class="hero-degree-title">B.Tech Artificial Intelligence &amp; Data Science</div>
+                <div class="hero-location-sub">
+                  <span>Sanjivani University</span>
+                  <span class="hero-uni-dot">&bull;</span>
+                  <span>Kopargaon, Maharashtra</span>
+                </div>
               </div>
 
               <div class="hero-tech-strip">
@@ -201,7 +205,7 @@
          ======================================================================= -->
     <section class="about-section" id="about">
       <div class="container">
-        <div class="section-header scroll-reveal">
+        <div class="section-header" data-reveal="up">
           <span class="section-label">Identity &amp; Vision</span>
           <h2 class="section-title">About</h2>
           <div class="section-divider"></div>
@@ -209,30 +213,30 @@
 
         <div class="about-grid">
           <!-- Left Column: Large Editorial Statement -->
-          <div class="about-quote-col scroll-reveal-left">
+          <div class="about-quote-col" data-reveal="left">
             <h3 class="about-quote">
               BUILDING SOFTWARE.<br>
               LEARNING INTELLIGENCE.<br>
               GROWING THROUGH CODE.
             </h3>
             <div class="about-pillars">
-              <div class="about-pillar-item">
+              <div class="about-pillar-item" data-reveal="up" data-stagger="1">
                 <span class="pillar-title">Technical Foundation</span>
                 <span class="pillar-desc">Computer Engineering &amp; OOP</span>
               </div>
-              <div class="about-pillar-item">
+              <div class="about-pillar-item" data-reveal="up" data-stagger="2">
                 <span class="pillar-title">Mobile Engineering</span>
                 <span class="pillar-desc">Android Studio, Java &amp; SQLite</span>
               </div>
-              <div class="about-pillar-item">
-                <span class="pillar-title">Future Expansion</span>
+              <div class="about-pillar-item" data-reveal="up" data-stagger="3">
+                <span class="pillar-title">AI Expansion</span>
                 <span class="pillar-desc">AI &amp; Data Science Exploration</span>
               </div>
             </div>
           </div>
 
           <!-- Right Column: Narrative Copy & Factual Identity Cards -->
-          <div class="about-narrative-col scroll-reveal-right">
+          <div class="about-narrative-col" data-reveal="right">
             <p class="about-lead-text">
               "I'm a B.Tech Artificial Intelligence &amp; Data Science student with a Diploma in Computer Engineering. My journey began with computer engineering and software development, where I developed an interest in building practical applications."
             </p>
@@ -240,24 +244,24 @@
               "Today, I'm expanding that foundation through Artificial Intelligence, Data Science, Python and modern software development. I enjoy learning by building and continuously improving my technical fundamentals."
             </p>
 
-            <!-- Factual Identity Row (Replaced fake statistics) -->
+            <!-- Factual Identity Row -->
             <div class="stats-grid">
-              <div class="stat-item">
+              <div class="stat-item" data-reveal="up" data-stagger="1">
                 <span class="stat-header-tag">Current Degree</span>
                 <div class="stat-identity-title">B.Tech</div>
                 <div class="stat-identity-sub">AI &amp; Data Science</div>
               </div>
-              <div class="stat-item">
+              <div class="stat-item" data-reveal="up" data-stagger="2">
                 <span class="stat-header-tag">Foundation</span>
                 <div class="stat-identity-title">Diploma</div>
                 <div class="stat-identity-sub">Computer Engineering</div>
               </div>
-              <div class="stat-item">
+              <div class="stat-item" data-reveal="up" data-stagger="3">
                 <span class="stat-header-tag">Portfolio</span>
                 <div class="stat-identity-title">01</div>
                 <div class="stat-identity-sub">Selected Project</div>
               </div>
-              <div class="stat-item">
+              <div class="stat-item" data-reveal="up" data-stagger="4">
                 <span class="stat-header-tag">Learning Focus</span>
                 <div class="stat-identity-title">AI + Data</div>
                 <div class="stat-identity-sub">Python &amp; ML Models</div>
@@ -266,14 +270,14 @@
           </div>
         </div>
 
-        <!-- WHAT I BUILD SUBSECTION (Categorized capabilities without fake numbers) -->
-        <div class="what-i-build-wrap scroll-reveal">
+        <!-- WHAT I BUILD SUBSECTION -->
+        <div class="what-i-build-wrap" data-reveal="up">
           <div class="what-i-build-header">
             <span class="section-label">Applied Capabilities</span>
             <h3 class="section-title" style="font-size: clamp(2rem, 3.5vw, 3.2rem);">What I Build</h3>
           </div>
           <div class="what-i-build-grid">
-            <div class="build-card">
+            <div class="build-card" data-reveal="up" data-stagger="1">
               <div>
                 <span class="build-card-num">01</span>
                 <h4 class="build-card-title">Android Applications</h4>
@@ -286,7 +290,7 @@
               </div>
             </div>
 
-            <div class="build-card">
+            <div class="build-card" data-reveal="up" data-stagger="2">
               <div>
                 <span class="build-card-num">02</span>
                 <h4 class="build-card-title">Software Projects</h4>
@@ -299,7 +303,7 @@
               </div>
             </div>
 
-            <div class="build-card">
+            <div class="build-card" data-reveal="up" data-stagger="3">
               <div>
                 <span class="build-card-num">03</span>
                 <h4 class="build-card-title">Database-Driven Applications</h4>
@@ -312,7 +316,7 @@
               </div>
             </div>
 
-            <div class="build-card">
+            <div class="build-card" data-reveal="up" data-stagger="4">
               <div>
                 <span class="build-card-num">04</span>
                 <h4 class="build-card-title">AI &amp; Data Science Projects</h4>
@@ -334,14 +338,14 @@
          ======================================================================= -->
     <section class="skills-section" id="skills">
       <div class="container">
-        <div class="section-header scroll-reveal">
+        <div class="section-header" data-reveal="up">
           <span class="section-label">Technical Competencies</span>
           <h2 class="section-title">Skills</h2>
           <div class="section-divider"></div>
         </div>
 
         <!-- Filter Category Tabs -->
-        <div class="skills-filter-bar scroll-reveal">
+        <div class="skills-filter-bar" data-reveal="up">
           <button class="skills-filter-btn active" data-filter="all">All Disciplines</button>
           <button class="skills-filter-btn" data-filter="foundation">Development Foundation</button>
           <button class="skills-filter-btn" data-filter="focus">Current Learning Focus</button>
@@ -350,7 +354,7 @@
         <!-- Staggered Skill Rows -->
         <div class="skills-list">
           <!-- Foundation 01 -->
-          <div class="skill-row scroll-reveal stagger-1" data-category="foundation">
+          <div class="skill-row" data-reveal="up" data-stagger="1" data-category="foundation">
             <span class="skill-index">01</span>
             <div class="skill-name-wrap">
               <span class="skill-name">Java</span>
@@ -365,7 +369,7 @@
           </div>
 
           <!-- Foundation 02 -->
-          <div class="skill-row scroll-reveal stagger-2" data-category="foundation">
+          <div class="skill-row" data-reveal="up" data-stagger="2" data-category="foundation">
             <span class="skill-index">02</span>
             <div class="skill-name-wrap">
               <span class="skill-name">Android</span>
@@ -380,7 +384,7 @@
           </div>
 
           <!-- Foundation 03 -->
-          <div class="skill-row scroll-reveal stagger-3" data-category="foundation">
+          <div class="skill-row" data-reveal="up" data-stagger="3" data-category="foundation">
             <span class="skill-index">03</span>
             <div class="skill-name-wrap">
               <span class="skill-name">XML</span>
@@ -395,7 +399,7 @@
           </div>
 
           <!-- Foundation 04 -->
-          <div class="skill-row scroll-reveal stagger-4" data-category="foundation">
+          <div class="skill-row" data-reveal="up" data-stagger="4" data-category="foundation">
             <span class="skill-index">04</span>
             <div class="skill-name-wrap">
               <span class="skill-name">SQLite</span>
@@ -410,7 +414,7 @@
           </div>
 
           <!-- Foundation 05 -->
-          <div class="skill-row scroll-reveal stagger-1" data-category="foundation">
+          <div class="skill-row" data-reveal="up" data-stagger="1" data-category="foundation">
             <span class="skill-index">05</span>
             <div class="skill-name-wrap">
               <span class="skill-name">Firebase</span>
@@ -425,7 +429,7 @@
           </div>
 
           <!-- Foundation 06 -->
-          <div class="skill-row scroll-reveal stagger-2" data-category="foundation">
+          <div class="skill-row" data-reveal="up" data-stagger="2" data-category="foundation">
             <span class="skill-index">06</span>
             <div class="skill-name-wrap">
               <span class="skill-name">SQL</span>
@@ -440,7 +444,7 @@
           </div>
 
           <!-- Foundation 07 -->
-          <div class="skill-row scroll-reveal stagger-3" data-category="foundation">
+          <div class="skill-row" data-reveal="up" data-stagger="3" data-category="foundation">
             <span class="skill-index">07</span>
             <div class="skill-name-wrap">
               <span class="skill-name">Git &amp; GitHub</span>
@@ -455,7 +459,7 @@
           </div>
 
           <!-- Focus 08 -->
-          <div class="skill-row scroll-reveal stagger-1" data-category="focus">
+          <div class="skill-row" data-reveal="up" data-stagger="1" data-category="focus">
             <span class="skill-index">08</span>
             <div class="skill-name-wrap">
               <span class="skill-name">Python</span>
@@ -470,7 +474,7 @@
           </div>
 
           <!-- Focus 09 -->
-          <div class="skill-row scroll-reveal stagger-2" data-category="focus">
+          <div class="skill-row" data-reveal="up" data-stagger="2" data-category="focus">
             <span class="skill-index">09</span>
             <div class="skill-name-wrap">
               <span class="skill-name">Artificial Intelligence</span>
@@ -485,7 +489,7 @@
           </div>
 
           <!-- Focus 10 -->
-          <div class="skill-row scroll-reveal stagger-3" data-category="focus">
+          <div class="skill-row" data-reveal="up" data-stagger="3" data-category="focus">
             <span class="skill-index">10</span>
             <div class="skill-name-wrap">
               <span class="skill-name">Data Science</span>
@@ -500,7 +504,7 @@
           </div>
 
           <!-- Focus 11 -->
-          <div class="skill-row scroll-reveal stagger-4" data-category="focus">
+          <div class="skill-row" data-reveal="up" data-stagger="4" data-category="focus">
             <span class="skill-index">11</span>
             <div class="skill-name-wrap">
               <span class="skill-name">Machine Learning</span>
@@ -515,7 +519,7 @@
           </div>
 
           <!-- Focus 12 -->
-          <div class="skill-row scroll-reveal stagger-1" data-category="focus">
+          <div class="skill-row" data-reveal="up" data-stagger="1" data-category="focus">
             <span class="skill-index">12</span>
             <div class="skill-name-wrap">
               <span class="skill-name">Flutter</span>
@@ -537,14 +541,14 @@
          ======================================================================= -->
     <section class="projects-section" id="project">
       <div class="container">
-        <div class="section-header scroll-reveal">
+        <div class="section-header" data-reveal="up">
           <span class="section-label">Completed Project Showcase</span>
           <h2 class="section-title">Selected Project</h2>
           <div class="section-divider"></div>
         </div>
 
         <!-- Large Editorial Centerpiece Layout -->
-        <article class="project-centerpiece-wrap scroll-reveal" id="project-shree">
+        <article class="project-centerpiece-wrap" data-reveal="scale" id="project-shree">
           <!-- Visual Media Column -->
           <div class="project-centerpiece-media" data-project-trigger="shree">
             <img 
@@ -603,7 +607,7 @@
          ======================================================================= -->
     <section class="education-section" id="education">
       <div class="container">
-        <div class="section-header scroll-reveal">
+        <div class="section-header" data-reveal="up">
           <span class="section-label">Academic Foundations</span>
           <h2 class="section-title">Education</h2>
           <div class="section-divider"></div>
@@ -611,10 +615,11 @@
 
         <div class="edu-grid">
           <!-- Degree 01: B.Tech (Current) -->
-          <div class="edu-card scroll-reveal-left">
+          <div class="edu-card" data-reveal="left">
             <div>
               <div class="edu-badge">Current Undergraduate Degree</div>
               <h3 class="edu-degree">B.Tech — Artificial Intelligence &amp; Data Science</h3>
+              <div class="edu-institution">Sanjivani University, Kopargaon, Maharashtra</div>
               <div class="edu-status-tag">Currently Pursuing</div>
               <div class="edu-field" style="margin-top: 1rem;">
                 Deepening theoretical and practical foundations in intelligent systems, machine learning algorithms, statistical data analysis, and modern computational models.
@@ -634,7 +639,7 @@
           </div>
 
           <!-- Degree 02: Diploma (Completed Foundation) -->
-          <div class="edu-card scroll-reveal-right">
+          <div class="edu-card" data-reveal="right">
             <div>
               <div class="edu-badge">Technical Foundation</div>
               <h3 class="edu-degree">Diploma — Computer Engineering</h3>
@@ -657,91 +662,142 @@
         </div>
 
         <!-- Visual Progression Indicator -->
-        <div class="edu-progression-connector scroll-reveal">
+        <div class="edu-progression-connector" data-reveal="up">
           <span>Progression: Diploma in Computer Engineering &rarr; B.Tech in AI &amp; Data Science</span>
         </div>
       </div>
     </section>
 
     <!-- =======================================================================
-         JOURNEY SECTION (Factual Typographic Roadmap)
+         JOURNEY SECTION (Signature Career Storytelling Timeline)
          ======================================================================= -->
     <section class="journey-section" id="journey">
       <div class="container">
-        <div class="section-header scroll-reveal">
+        <div class="section-header" data-reveal="up">
           <span class="section-label">Evolution &amp; Milestones</span>
           <h2 class="section-title">Journey</h2>
           <div class="section-divider"></div>
         </div>
 
-        <div class="journey-timeline">
-          <!-- Step 01 -->
-          <div class="journey-item scroll-reveal stagger-1">
-            <div class="journey-role-col">
-              <span class="journey-num">01 / FOUNDATION</span>
-              <h3 class="journey-title">Diploma in Computer Engineering</h3>
-            </div>
-            <div class="journey-content-col">
-              <p class="journey-desc">
-                Built my core technical foundation in programming, computer engineering principles, and software development at CSMSS College of Polytechnic, Chh. Sambhajinagar.
-              </p>
-              <div class="journey-stack">Focus: C++, Java, Database Management, Computer Hardware &amp; Networking</div>
-            </div>
+        <div class="journey-timeline-wrapper">
+          <!-- Dynamic Vertical Spine & Progress Indicator -->
+          <div class="journey-timeline-spine">
+            <div class="journey-timeline-progress-bar" id="journeyProgressBar"></div>
           </div>
 
-          <!-- Step 02 -->
-          <div class="journey-item scroll-reveal stagger-2">
-            <div class="journey-role-col">
-              <span class="journey-num">02 / SPECIALIZATION</span>
-              <h3 class="journey-title">Android Development</h3>
+          <div class="journey-timeline" id="journeyTimeline">
+            <!-- Step 01: Foundation -->
+            <div class="journey-item" data-milestone="1">
+              <div class="journey-node">
+                <span class="journey-node-dot"></span>
+              </div>
+              <div class="journey-role-col">
+                <span class="journey-num">01 / FOUNDATION</span>
+                <h3 class="journey-title">Diploma in Computer Engineering</h3>
+              </div>
+              <div class="journey-content-col">
+                <p class="journey-desc">
+                  Built my core technical foundation in programming paradigms, computer hardware, operating systems, and computer engineering principles at CSMSS College of Polytechnic, Chh. Sambhajinagar.
+                </p>
+                <div class="journey-stack">
+                  <span class="journey-tech-badge">C++</span>
+                  <span class="journey-tech-badge">Java (OOP)</span>
+                  <span class="journey-tech-badge">Relational SQL</span>
+                  <span class="journey-tech-badge">Data Structures</span>
+                  <span class="journey-tech-badge">Computer Networks</span>
+                </div>
+              </div>
             </div>
-            <div class="journey-content-col">
-              <p class="journey-desc">
-                Started building mobile software solutions using Java, native XML layout architectures, SQLite persistence, and Android Studio tooling.
-              </p>
-              <div class="journey-stack">Tooling: Android Studio, Java, XML Layouts, SQLite Caching</div>
-            </div>
-          </div>
 
-          <!-- Step 03 -->
-          <div class="journey-item scroll-reveal stagger-3">
-            <div class="journey-role-col">
-              <span class="journey-num">03 / PROJECT</span>
-              <h3 class="journey-title">Shree Enterprises</h3>
+            <!-- Step 02: Specialization -->
+            <div class="journey-item" data-milestone="2">
+              <div class="journey-node">
+                <span class="journey-node-dot"></span>
+              </div>
+              <div class="journey-role-col">
+                <span class="journey-num">02 / SPECIALIZATION</span>
+                <h3 class="journey-title">Android Development</h3>
+              </div>
+              <div class="journey-content-col">
+                <p class="journey-desc">
+                  Focused on building practical mobile software solutions using native Java, responsive XML layouts, SQLite local database persistence, and Android Studio tooling.
+                </p>
+                <div class="journey-stack">
+                  <span class="journey-tech-badge">Android Studio</span>
+                  <span class="journey-tech-badge">Java SDK</span>
+                  <span class="journey-tech-badge">XML Layouts</span>
+                  <span class="journey-tech-badge">SQLite Caching</span>
+                  <span class="journey-tech-badge">Activities &amp; Services</span>
+                </div>
+              </div>
             </div>
-            <div class="journey-content-col">
-              <p class="journey-desc">
-                Engineered and delivered my completed Android mobile application project for PC and laptop component exploration, incorporating local SQLite and Firebase cloud synchronization.
-              </p>
-              <div class="journey-stack">Key Stack: Java, XML, SQLite, Firebase Realtime Database</div>
-            </div>
-          </div>
 
-          <!-- Step 04 -->
-          <div class="journey-item scroll-reveal stagger-4">
-            <div class="journey-role-col">
-              <span class="journey-num">04 / DEGREE</span>
-              <h3 class="journey-title">B.Tech — AI &amp; Data Science</h3>
+            <!-- Step 03: Project Showcase -->
+            <div class="journey-item" data-milestone="3">
+              <div class="journey-node">
+                <span class="journey-node-dot"></span>
+              </div>
+              <div class="journey-role-col">
+                <span class="journey-num">03 / PROJECT SHOWCASE</span>
+                <h3 class="journey-title">Shree Enterprises</h3>
+              </div>
+              <div class="journey-content-col">
+                <p class="journey-desc">
+                  Engineered and delivered a complete Android application for PC and laptop component configuration, combining offline SQLite local caching with Firebase cloud synchronization.
+                </p>
+                <div class="journey-stack">
+                  <span class="journey-tech-badge">Java</span>
+                  <span class="journey-tech-badge">XML Architecture</span>
+                  <span class="journey-tech-badge">SQLite DB</span>
+                  <span class="journey-tech-badge">Firebase Realtime</span>
+                  <span class="journey-tech-badge">Full Case Study</span>
+                </div>
+              </div>
             </div>
-            <div class="journey-content-col">
-              <p class="journey-desc">
-                Currently pursuing B.Tech in Artificial Intelligence &amp; Data Science, expanding software engineering capabilities into intelligent algorithms and statistical data pipelines.
-              </p>
-              <div class="journey-stack">Academic Focus: Artificial Intelligence, Data Science, Probability &amp; Statistics</div>
-            </div>
-          </div>
 
-          <!-- Step 05 -->
-          <div class="journey-item scroll-reveal stagger-5">
-            <div class="journey-role-col">
-              <span class="journey-num">05 / ACTIVE</span>
-              <h3 class="journey-title">Current Focus</h3>
+            <!-- Step 04: Academic Evolution -->
+            <div class="journey-item" data-milestone="4">
+              <div class="journey-node">
+                <span class="journey-node-dot"></span>
+              </div>
+              <div class="journey-role-col">
+                <span class="journey-num">04 / NEW DIRECTION</span>
+                <h3 class="journey-title">B.Tech — AI &amp; Data Science</h3>
+              </div>
+              <div class="journey-content-col">
+                <p class="journey-desc">
+                  Currently pursuing B.Tech in Artificial Intelligence &amp; Data Science at Sanjivani University, expanding software engineering capabilities into intelligent algorithms, neural models, and statistical data pipelines.
+                </p>
+                <div class="journey-stack">
+                  <span class="journey-tech-badge">Artificial Intelligence</span>
+                  <span class="journey-tech-badge">Data Science</span>
+                  <span class="journey-tech-badge">Probability &amp; Stats</span>
+                  <span class="journey-tech-badge">Sanjivani University</span>
+                </div>
+              </div>
             </div>
-            <div class="journey-content-col">
-              <p class="journey-desc">
-                Actively learning and building with Python, Artificial Intelligence fundamentals, Data Science, Machine Learning, and continuous software development improvement.
-              </p>
-              <div class="journey-stack">Continuous Learning: Python, Scikit-learn, Pandas, Flutter, Modern Software</div>
+
+            <!-- Step 05: Current Focus & Future -->
+            <div class="journey-item" data-milestone="5">
+              <div class="journey-node">
+                <span class="journey-node-dot"></span>
+              </div>
+              <div class="journey-role-col">
+                <span class="journey-num">05 / ACTIVE &amp; FUTURE</span>
+                <h3 class="journey-title">Current Focus</h3>
+              </div>
+              <div class="journey-content-col">
+                <p class="journey-desc">
+                  Actively learning, building, and exploring Python, Machine Learning models (Scikit-learn), Data Analytics (Pandas/NumPy), cross-platform Flutter, and engineering intelligent software systems.
+                </p>
+                <div class="journey-stack">
+                  <span class="journey-tech-badge">Python</span>
+                  <span class="journey-tech-badge">Machine Learning</span>
+                  <span class="journey-tech-badge">Data Analytics</span>
+                  <span class="journey-tech-badge">Flutter</span>
+                  <span class="journey-tech-badge">Continuous Growth</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -753,43 +809,54 @@
          ======================================================================= -->
     <section class="focus-section" id="focus">
       <div class="container">
-        <div class="section-header scroll-reveal">
+        <div class="section-header" data-reveal="up">
           <span class="section-label">Active Learning Direction</span>
           <h2 class="section-title">Current Focus</h2>
           <div class="section-divider"></div>
         </div>
 
-        <!-- Monumental Typographic Words List -->
-        <div class="focus-words-list scroll-reveal">
-          <div class="focus-word-item">
+        <!-- Monumental Typographic Words List (Sequential Reveal) -->
+        <div class="focus-words-list" data-reveal="up">
+          <div class="focus-word-item" data-reveal="up" data-stagger="1">
             <span>Software Development</span>
             <span class="focus-word-index">01 / CORE</span>
           </div>
-          <div class="focus-word-item">
+          <div class="focus-word-item" data-reveal="up" data-stagger="2">
             <span>Python</span>
             <span class="focus-word-index">02 / LANGUAGE</span>
           </div>
-          <div class="focus-word-item">
+          <div class="focus-word-item" data-reveal="up" data-stagger="3">
             <span>Artificial Intelligence</span>
             <span class="focus-word-index">03 / DEGREE DOMAIN</span>
           </div>
-          <div class="focus-word-item">
+          <div class="focus-word-item" data-reveal="up" data-stagger="4">
             <span>Data Science</span>
             <span class="focus-word-index">04 / ANALYTICS</span>
           </div>
-          <div class="focus-word-item">
+          <div class="focus-word-item" data-reveal="up" data-stagger="5">
             <span>Machine Learning</span>
             <span class="focus-word-index">05 / EXPLORATION</span>
           </div>
         </div>
 
         <!-- Supporting Statement Card -->
-        <div class="focus-support-card scroll-reveal">
+        <div class="focus-support-card" data-reveal="up">
           <p class="focus-support-text">
             "Currently strengthening my software development fundamentals while building a strong foundation in Python, Artificial Intelligence and Data Science through my B.Tech journey."
           </p>
           <div class="focus-honesty-badge">
             Student-Developer Learning Direction
+          </div>
+        </div>
+
+        <!-- Concluding Future Statement -->
+        <div class="focus-next-statement" data-reveal="up" data-stagger="2">
+          <div>
+            <span class="section-label" style="color: rgba(255,255,255,0.7); margin-bottom: 0.25rem;">Vision Forward</span>
+            <div class="focus-next-title">Building What's Next.</div>
+          </div>
+          <div class="focus-next-pill">
+            Software + Intelligence
           </div>
         </div>
       </div>
@@ -802,7 +869,7 @@
       <div class="container">
         <div class="contact-layout">
           <!-- Left Column: Giant Typographic Callout -->
-          <div class="contact-hero-col scroll-reveal-left">
+          <div class="contact-hero-col" data-reveal="left">
             <span class="section-label">Let's Connect</span>
             <h2 class="contact-hero-heading">
               Let's build<br>something<span class="accent-dot">.</span>
@@ -832,7 +899,7 @@
           </div>
 
           <!-- Right Column: Interactive Contact Form -->
-          <div class="contact-form-col scroll-reveal-right">
+          <div class="contact-form-col" data-reveal="right">
             <div class="contact-form-box">
               <h3 class="contact-form-title">Send a Direct Message</h3>
               <form id="contactForm">
@@ -867,10 +934,10 @@
       <div class="footer-top-row">
         <div>
           <a href="#hero" class="footer-brand">
-            VIVEK<span class="accent-dot">.</span>
+            Vivek Vaidya<span class="accent-dot">.</span>
           </a>
           <div style="font-family: var(--font-mono); font-size: 0.85rem; color: #A0A0A0; margin-top: 0.4rem;">
-            Software Developer &bull; B.Tech AI &amp; Data Science
+            Software Developer &bull; B.Tech AI &amp; Data Science &bull; Sanjivani University
           </div>
         </div>
         <div class="footer-nav">

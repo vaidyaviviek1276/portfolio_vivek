@@ -42,32 +42,42 @@
   });
 
   // --------------------------------------------------------------------------
-  // Skills Interactive Category Filter
+  // Skills Interactive Category Filter (Smooth Editorial Transition)
   // --------------------------------------------------------------------------
   const filterBtns = document.querySelectorAll('.skills-filter-btn');
   const skillRows = document.querySelectorAll('.skill-row');
 
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
+      if (btn.classList.contains('active')) return;
+
       filterBtns.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
 
       const filter = btn.getAttribute('data-filter');
 
-      skillRows.forEach((row) => {
+      skillRows.forEach((row, index) => {
         const category = row.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          row.style.display = 'grid';
+        const shouldShow = filter === 'all' || category === filter;
+
+        if (shouldShow) {
+          row.style.display = '';
+          row.classList.remove('is-filtering-out');
           setTimeout(() => {
+            row.classList.add('is-filtering-in', 'is-visible');
             row.style.opacity = '1';
             row.style.transform = 'translateY(0)';
-          }, 20);
+          }, 20 + index * 25);
         } else {
+          row.classList.remove('is-filtering-in');
+          row.classList.add('is-filtering-out');
           row.style.opacity = '0';
           row.style.transform = 'translateY(10px)';
           setTimeout(() => {
-            row.style.display = 'none';
-          }, 200);
+            if (row.classList.contains('is-filtering-out')) {
+              row.style.display = 'none';
+            }
+          }, 240);
         }
       });
     });

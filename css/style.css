@@ -4,7 +4,7 @@
    ========================================================================== */
 
 /* Google Fonts imported inside CSS for seamless standalone loading */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
 
 /* --------------------------------------------------------------------------
    CSS VARIABLES & DESIGN TOKENS
@@ -23,8 +23,8 @@
   --color-accent-subtle: rgba(233, 75, 104, 0.1);
   --color-white: #FFFFFF;
 
-  /* Typography */
-  --font-display: 'Anton', 'Bebas Neue', -apple-system, sans-serif;
+  /* Typography: Orbitron ONLY for main headings, Plus Jakarta Sans for body/all other text */
+  --font-display: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'Space Grotesk', monospace;
 
@@ -159,11 +159,11 @@ ul, ol {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+  line-height: 1.06;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--color-primary);
 }
 
@@ -201,14 +201,19 @@ ul, ol {
 /* Brand Logo */
 .brand-logo {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 2.2vw, 2.3rem);
-  font-weight: 900;
-  letter-spacing: -0.03em;
+  font-size: clamp(1.15rem, 1.45vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
   color: var(--color-primary);
   text-transform: uppercase;
   display: inline-flex;
   align-items: baseline;
   line-height: 1;
+  transition: opacity 0.2s ease;
+}
+
+.brand-logo:hover {
+  opacity: 0.85;
 }
 
 /* Nav links */
@@ -219,8 +224,10 @@ ul, ol {
 }
 
 .nav-link {
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--color-secondary);
   transition: color 0.2s ease;
 }
@@ -238,6 +245,7 @@ ul, ol {
 }
 
 .btn-header-cta {
+  font-family: var(--font-display);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -245,9 +253,9 @@ ul, ol {
   background-color: var(--color-primary);
   color: var(--color-white);
   border-radius: var(--radius-full);
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   border: 1px solid var(--color-primary);
 }
 
@@ -417,14 +425,14 @@ ul, ol {
 
 .hero-title-solid {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 9.8vw, 9.4rem);
-  font-weight: 800;
+  font-size: clamp(2.2rem, 6.6vw, 6.2rem);
+  font-weight: 700;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 0.90;
-  letter-spacing: -0.008em;
-  word-spacing: 0.03em;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  word-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-primary);
   display: block;
@@ -434,21 +442,21 @@ ul, ol {
 
 .hero-title-outline {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 9.8vw, 9.4rem);
-  font-weight: 800;
+  font-size: clamp(2.2rem, 6.6vw, 6.2rem);
+  font-weight: 700;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 0.90;
-  letter-spacing: -0.008em;
-  word-spacing: 0.03em;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  word-spacing: 0.08em;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1.25px var(--color-primary);
+  -webkit-text-stroke: 1.2px var(--color-primary);
   display: block;
   position: relative;
   z-index: 1;
-  margin-top: 0.04em;
+  margin-top: 0.08em;
   transition: color 0.4s var(--ease-editorial), -webkit-text-stroke 0.4s ease;
 }
 
@@ -1162,6 +1170,12 @@ ul, ol {
 .journey-section {
   padding: var(--section-spacing) 0;
   background-color: var(--color-bg);
+  position: relative;
+}
+
+.journey-timeline-wrapper {
+  position: relative;
+  width: 100%;
 }
 
 .journey-timeline {
@@ -1172,9 +1186,9 @@ ul, ol {
 
 .journey-item {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  padding: 2.25rem 0;
-  border-bottom: 1px solid var(--color-border);
+  grid-template-columns: 260px 1fr;
+  padding: 2.5rem 0 2.5rem 64px;
+  border-bottom: 1px solid var(--color-border-light);
   position: relative;
   transition: background-color 0.25s ease;
 }
@@ -1183,25 +1197,32 @@ ul, ol {
   background-color: var(--color-surface);
 }
 
+.journey-item:last-child {
+  border-bottom: none;
+}
+
 .journey-role-col {
   padding-right: 2rem;
 }
 
 .journey-num {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--color-accent);
+  font-size: 0.82rem;
+  color: var(--color-muted);
   font-weight: 700;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
+  letter-spacing: 0.06em;
+  transition: color 0.3s ease;
 }
 
 .journey-title {
   font-family: var(--font-display);
-  font-size: 1.8rem;
-  line-height: 1.1;
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  line-height: 1.15;
   text-transform: uppercase;
   color: var(--color-primary);
+  letter-spacing: -0.01em;
 }
 
 .journey-content-col {
@@ -1211,16 +1232,16 @@ ul, ol {
 }
 
 .journey-desc {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   color: var(--color-secondary);
   line-height: 1.7;
 }
 
 .journey-stack {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--color-muted);
-  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -1242,9 +1263,10 @@ ul, ol {
 
 .contact-hero-heading {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 8vw, 7.5rem);
-  line-height: 0.92;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.4rem, 5.8vw, 5.4rem);
+  line-height: 1.06;
+  letter-spacing: 0.02em;
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--color-primary);
   margin-bottom: 1.75rem;
@@ -1435,8 +1457,9 @@ ul, ol {
 
 .footer-brand {
   font-family: var(--font-display);
-  font-size: 2.2rem;
-  letter-spacing: -0.02em;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-white);
 }
@@ -1448,7 +1471,10 @@ ul, ol {
 }
 
 .footer-nav-link {
-  font-size: 0.9rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: #A0A0A0;
   transition: color 0.2s ease;
 }
@@ -1848,9 +1874,10 @@ ul, ol {
 
 .focus-word-item {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 7vw, 6.8rem);
-  line-height: 0.92;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.0rem, 5.0vw, 4.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--color-primary);
   padding: 1rem 0;
@@ -1966,6 +1993,15 @@ ul, ol {
   .journey-item {
     grid-template-columns: 1fr;
     gap: 0.75rem;
+    padding-left: 56px;
+  }
+
+  .journey-timeline-spine {
+    left: 20px;
+  }
+
+  .journey-node {
+    left: 20px;
   }
 
   .journey-role-col {
@@ -2037,6 +2073,27 @@ ul, ol {
   .skill-category-badge {
     grid-column: 2;
     margin-top: 0.5rem;
+  }
+
+  .journey-item {
+    padding: 1.75rem 0 1.75rem 44px;
+    gap: 0.5rem;
+  }
+
+  .journey-timeline-spine {
+    left: 14px;
+  }
+
+  .journey-node {
+    left: 14px;
+    top: 2.1rem;
+    width: 14px;
+    height: 14px;
+  }
+
+  .journey-node-dot {
+    width: 4px;
+    height: 4px;
   }
 
   .footer-top-row {

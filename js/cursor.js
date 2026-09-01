@@ -81,7 +81,7 @@
   function attachHoverListeners() {
     // Interactive clickable links & buttons
     const clickables = document.querySelectorAll(
-      'a, button, .btn-primary, .btn-secondary, .btn-hero-primary, .btn-hero-secondary, .contact-email-box, .skills-filter-btn'
+      'a, button, .btn-primary, .btn-secondary, .btn-hero-primary, .btn-hero-secondary, .contact-email-box, .skills-filter-btn, [data-project-trigger]'
     );
 
     clickables.forEach((el) => {
@@ -93,8 +93,10 @@
       });
     });
 
-    // Project cards - large view state
-    const viewables = document.querySelectorAll('.project-media, .hero-floating-badge, .skill-row');
+    // Project cards & rich interaction items - view state
+    const viewables = document.querySelectorAll(
+      '.project-centerpiece-media, .project-media, .hero-floating-badge, .skill-row, .focus-word-item'
+    );
     viewables.forEach((el) => {
       el.addEventListener('mouseenter', () => {
         document.body.classList.add('cursor-view');
