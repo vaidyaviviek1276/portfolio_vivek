@@ -82,16 +82,12 @@
     const heroHeight = heroSection.offsetHeight;
 
     if (scrollY <= heroHeight + 50) {
-      // Subtle layered translation
+      // Subtle layered translation without fading opacity
       if (heroTitle) {
         heroTitle.style.transform = `translate3d(0, ${scrollY * 0.12}px, 0)`;
       }
       if (heroPortrait) {
         heroPortrait.style.transform = `translate3d(0, ${scrollY * 0.06}px, 0)`;
-      }
-      if (heroContent) {
-        const opacityRatio = Math.max(0, 1 - scrollY / (heroHeight * 0.92));
-        heroContent.style.opacity = opacityRatio.toFixed(3);
       }
     }
 

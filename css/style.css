@@ -420,7 +420,7 @@ ul, ol {
 .hero-title-wrap {
   position: relative;
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .hero-title-solid {
@@ -496,19 +496,19 @@ ul, ol {
 .hero-stage {
   position: relative;
   width: 100%;
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  min-height: clamp(380px, 50vh, 560px);
-  margin-top: -6vw;
+  min-height: clamp(380px, 48vh, 540px);
+  margin-top: -2vw;
   z-index: 3;
 }
 
 .hero-portrait-wrapper {
   position: relative;
-  width: clamp(280px, 36vw, 440px);
+  width: clamp(260px, 30vw, 390px);
   height: auto;
   pointer-events: none;
   filter: contrast(105%) brightness(98%);
@@ -519,15 +519,15 @@ ul, ol {
   height: auto;
   object-fit: cover;
   display: block;
-  /* Gentle bottom fade mask into pure white */
-  mask-image: linear-gradient(to bottom, black 65%, transparent 98%);
-  -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 98%);
+  /* Subtle bottom fade mask restricted to the last 15% */
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
-/* Hero Info Overlay Row (Below/Beside Portrait) */
+/* Hero Info Overlay Row (Spread cleanly to sides away from Portrait) */
 .hero-sub-row {
   position: absolute;
-  bottom: 15%;
+  bottom: 12%;
   left: 0;
   width: 100%;
   display: flex;
@@ -535,15 +535,20 @@ ul, ol {
   align-items: flex-end;
   pointer-events: auto;
   z-index: 5;
-  padding: 0 clamp(1rem, 3vw, 2.5rem);
+  padding: 0 0.5rem;
 }
 
 .hero-location {
   text-align: left;
-  font-size: clamp(1rem, 1.4vw, 1.35rem);
+  font-size: clamp(0.92rem, 1.2vw, 1.2rem);
   font-weight: 500;
   color: var(--color-primary);
   letter-spacing: -0.01em;
+  max-width: 380px;
+}
+
+.hero-degree-title {
+  white-space: nowrap;
 }
 
 .hero-location-sub {
@@ -557,19 +562,23 @@ ul, ol {
 .hero-tech-strip {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  opacity: 0.75;
+  justify-content: flex-end;
+  gap: clamp(0.75rem, 1.1vw, 1.25rem);
+  opacity: 0.85;
+  text-align: right;
+  max-width: 380px;
 }
 
 .hero-tech-item {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--color-secondary);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 2px;
+  white-space: nowrap;
 }
 
 /* Dual CTA Buttons at the bottom center of Hero */
@@ -2047,7 +2056,7 @@ ul, ol {
   }
 
   .hero-stage {
-    margin-top: -3vw;
+    margin-top: 0.5rem;
     min-height: 320px;
   }
 
